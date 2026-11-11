@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Interactive Budgeting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SpendWise Dashboard</h1>
+            <p>Manage your expenses and track your budget intelligently.</p>
+        </header>
+
+        <!-- Budget Overview Section -->
+        <section class="card budget-summary">
+            <h2>Budget Overview</h2>
+            <p>Total Budget: $<span id="total-budget">1000</span></p>
+            <p>Total Spent: $<span id="total-spent">0</span></p>
+            <p>Remaining: $<span id="remaining-budget">1000</span></p>
+            <div id="budget-feedback" class="feedback-box">Status: On Track</div>
+        </section>
+
+        <!-- Expense Form Section -->
+        <section class="card">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <div class="form-group">
+                    <label for="expense-name">Expense Name:</label>
+                    <input type="text" id="expense-name" required placeholder="e.g., Groceries">
+                </div>
+                <div class="form-group">
+                    <label for="expense-amount">Amount ($):</label>
+                    <input type="number" id="expense-amount" required min="1" placeholder="e.g., 50">
+                </div>
+                <button type="submit" id="add-btn">Add Expense</button>
+            </form>
+        </section>
+
+        <!-- Expense List Section -->
+        <section class="card">
+            <h2>Expense Records</h2>
+            <ul id="expense-list">
+                <!-- Dynamically populated by JavaScript -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
